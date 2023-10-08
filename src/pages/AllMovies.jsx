@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAllMovies } from "../api/ApiFetch";
 import { useNavigate } from "react-router-dom";
+import { FooterComponent } from "../components/Footer";
 const baseImg = process.env.REACT_APP_BASEIMGURL;
 export const AllMovies = () => {
   const [allMovie, setAllMovie] = useState([]);
@@ -32,6 +33,7 @@ export const AllMovies = () => {
         </div>
       ))}
       </div>
+      <FooterComponent/>
     </div>
   );
 };
