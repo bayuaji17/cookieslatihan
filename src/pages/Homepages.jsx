@@ -3,7 +3,7 @@ import { Navbar } from "../components/navbar/Navbar";
 import { Carousel } from "../components/Carousel";
 import { Slider } from "../components/Slider";
 import { FooterComponent } from "../components/Footer";
-import { TrailerProvider } from "../api/TrailerContext";
+// import { TrailerProvider } from "../api/TrailerContext";
 
 export const Homepages = () => {
   return (
@@ -11,9 +11,7 @@ export const Homepages = () => {
       <div className="absolute top-0 right-0 bottom-0 left-0">
         <Navbar />
       </div>
-      <TrailerProvider>
         <Carousel />
-      </TrailerProvider>
       <div className="flex flex-row justify-between container mx-auto px-10 mt-5">
         <h1 className="font-black text-4xl text-red-500">Popular Movie</h1>
         <Link
