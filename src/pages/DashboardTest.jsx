@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useGetDataUser } from "../services/auth/get_user";
 import { CookieKeys, CookieStorage } from "../utils/cookies";
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export const DashboardTest = () => {
   const { data: salto, status, isError } = useGetDataUser({});
   // useEffect(() => {

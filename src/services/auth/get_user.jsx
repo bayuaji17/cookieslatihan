@@ -1,21 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
 import { API_ENDPOINT } from "../../utils/api-endpoint";
 import http2 from "../../utils/http2";
-import { Navigate, redirect, useNavigate } from "react-router-dom";
-import { CookieKeys, CookieStorage } from "../../utils/cookies";
+// import { Navigate, redirect, useNavigate } from "react-router-dom";
+// import { CookieKeys, CookieStorage } from "../../utils/cookies";
 
 const fetchUserData = async ({ queryKey }) => {
   const [_key] = queryKey;
   const { data } = await http2
-    .get(_key)
-    .then((value) => {
-      let Datahasil = {
-        bayu: value.data.data.name,
-      };
-      return { data: Datahasil };
-    })
-    .catch((err) => {
-      if (err.response.status === 401) {
+  .get(_key)
+  .then((value) => {
+    let Datahasil = {
+      bayu: value.data.data.name,
+    };
+    return { data: Datahasil };
+  })
+  .catch((err) => {
+    console.log(err.response.status)
+    if (err.response.status === 401) {
         window.location.href = "/login";
       }
     });

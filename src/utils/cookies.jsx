@@ -4,7 +4,7 @@ const cookies = new Cookies();
 export const CookieKeys = {
   AuthToken: "MyToken",
   User: "User",
-  LimitError:100,
+  // LimitError:100,
 };
 
 const CookieOptions = {
