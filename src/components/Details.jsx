@@ -17,7 +17,7 @@ export const Details = () => {
           headers: {
             accept: "application/json",
             Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6ImJheXVhamkxIiwiZW1haWwiOiJjb2xhYmNveUBnbWFpbC5jb20iLCJpYXQiOjE2OTcxMDM5MjF9.1ZP6kvdNpKBxM4ArZHA2om1D3lc3d0D4sfRdvP1T6bc",
+              "Bearer ${apiKey}",
           },
         });
         console.log(response.data, "INI isinya bro");
